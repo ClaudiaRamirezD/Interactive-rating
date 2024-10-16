@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --ff: "Overpass", sans-serif;
+    --fw-light: 400;
+    --fw-bold: 700;
+    --fs-paragraph: clamp(1.5rem, 1.3592rem + 0.3756vw, 1.9rem);
+    --fs-title : clamp(2rem, 1.2958rem + 1.8779vw, 4rem);
+
+    --clr-accent: hsl(25, 97%, 53%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-grey: hsl(217, 12%, 63%);
+    --clr-dark-blue: hsl(213, 19%, 18%);
+    --clr-very-dark: hsl(216, 12%, 8%);
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff);
+    font-size: var(--fs-paragraph);
+    background-color: var(--clr-very-dark);
+    font-weight: var(--fw-bold);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-container {
+    width: 100%;
+    max-width: clamp(35rem, 18.6197rem + 35.6808vw, 50rem);
+    padding: 2.2rem;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(33, 40, 50), rgb(23, 30, 40));
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.title {
+    color: var(--clr-white);
+    font-size: var(--fs-title);
+}
+.decorative-star {
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-dark-blue);
+    padding: .8rem;
+    border-radius: 50%;
+    width: 3rem;
+}
+
+.decorative-star img {
+    width: 1.5rem;
+    height: auto;
+}
+
+.card-text{
+    font-size: var(--fs-paragraph);
+    color: var(--clr-light-grey);
+    font-weight: var(--fw-light) ;
+    line-height: 1.5;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+
+}
+
+.numbers {
+    display: none;
+}
+
+.numbers-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.2rem;
+    height: 4.2rem;
+    background-color: var(--clr-dark-blue);
+    border-radius: 50%;
+    position: relative;  
+    color: var(--clr-light-grey);
+    cursor: pointer;
+}
+
+.label {
+    position: absolute;
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--clr-white);
+    color: var(--clr-very-dark);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.numbers-container:hover {
+    background-color: var(--clr-accent);
+    color: var(--clr-very-dark);
+}
+
+.btn {
+    background-color: var(--clr-accent);
+    border: 2px solid var(--clr-very-dark);
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: var(--fw-bold);
+}
+
+
+.thanks-card {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--clr-light-grey);
+}
+
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
