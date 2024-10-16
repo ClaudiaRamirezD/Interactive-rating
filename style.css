@@ -36,16 +36,51 @@ body {
 
 .card-container {
     width: 100%;
-    max-width: clamp(35rem, 18.6197rem + 35.6808vw, 50rem);
+    max-width: clamp(34rem, 18.6197rem + 35.6808vw, 45rem);
     padding: 2.2rem;
-    border-radius: 10px;
+    border-radius: 20px;
     background-image: linear-gradient(rgb(33, 40, 50), rgb(23, 30, 40));
 }
 
 .card {
     display: flex;
+    /* display: none; */
     flex-direction: column;
     gap: 1.8rem;
+}
+
+.thanks-card{
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+}
+
+.thanks-title {
+    color: var(--clr-white);
+    font-size: 3rem
+}
+
+.thanks-text {
+    color: var(--clr-light-grey);
+    line-height: 1.8;
+    font-size: var(--fs-paragraph);
+    text-align: center;
+}
+
+.thanks-card img {
+    width: 20rem;
+}
+
+.show-selected-rating { 
+    margin-block: 2rem;
+    padding: 1.5rem;
+    color: var(--clr-accent);
+    font-size: 1.8rem;
+    background-color: var(--clr-dark-blue);
+    border-radius: 30px;
 }
 
 .title {
@@ -73,6 +108,16 @@ body {
     line-height: 1.5;
 }
 
+.error-message {
+    color: red;
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+}
+
+.visible {
+    display: block; /* Show when the error is triggered */
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -82,6 +127,10 @@ body {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+.error-message.visible {
+  display: block; /* Ensure it is visible */
 }
 
 .rating {
@@ -135,12 +184,10 @@ form {
     padding: 1rem;
     border-radius: 2rem;
     font-weight: var(--fw-bold);
+    cursor: pointer;
 }
 
 
-.thanks-card {
-    display: none;
-}
 
 footer {
     text-align: center;
