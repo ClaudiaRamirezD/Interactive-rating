@@ -60,7 +60,8 @@ body {
 
 .thanks-title {
     color: var(--clr-white);
-    font-size: 3rem
+    font-size: 3rem;
+    text-align: center;
 }
 
 .thanks-text {
@@ -141,8 +142,13 @@ body {
 }
 
 .numbers {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
 }
+
 
 .numbers-container {
     display: flex;
@@ -187,6 +193,18 @@ form {
     cursor: pointer;
 }
 
+button:focus,
+input:focus {
+    outline: 1px solid #000; /* Black outline for focus, you can choose any color */
+    
+}
+
+input[type="radio"]:focus {
+    outline: 2px solid blue;
+    box-shadow: 0 0 0 4px rgba(0, 0, 255, 0.5); /* Adding an extra layer for better visibility */
+}
+
+
 
 
 footer {
@@ -197,5 +215,5 @@ footer {
 
 
 
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

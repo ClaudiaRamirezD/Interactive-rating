@@ -14,7 +14,6 @@
   <div class="wrapper">
     <div class="card-container">
       <article class="card">
-        <h2 class="sr-only">Rating card</h2>
         <span class="decorative-star">
           <img src="/images/icon-star.svg" alt="">
         </span>
@@ -23,33 +22,33 @@
         <p class="card-text">
             Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
         </p>
-        <form action="#">
-          <fieldset class="rating">
+        <form action="#" aria-labelledby="rating-form">
+          <fieldset class="rating" id="rating-form" aria-labelledby="rating-group">
             <legend class="sr-only">Rate this from 1 to 5</legend>
             
             <div class="numbers-container">
-              <input type="radio" id="btn1" name="numbers" class="numbers" value="1">
-              <label for="btn1" class="label">1</label>
+              <input type="radio" id="btn1" name="numbers" class="numbers" value="1" aria-labelledby="btn1-label" tabindex="0">
+              <label for="btn1" class="label" id="btn1-label">1</label>
             </div>
             
             <div class="numbers-container">
-              <input type="radio" id="btn2" name="numbers" class="numbers" value="2">
-              <label for="btn2" class="label">2</label>
+              <input type="radio" id="btn2" name="numbers" class="numbers" value="2" aria-labelledby="btn2-label" tabindex="0">
+              <label for="btn2" class="label" id="btn2-label">2</label>
             </div>
             
             <div class="numbers-container">
-              <input type="radio" id="btn3" name="numbers" class="numbers" value="3">
-              <label for="btn3" class="label">3</label>
+              <input type="radio" id="btn3" name="numbers" class="numbers" value="3" aria-labelledby="btn3-label" tabindex="0">
+              <label for="btn3" class="label" id="btn3-label">3</label>
             </div>
             
             <div class="numbers-container">
-              <input type="radio" id="btn4" name="numbers" class="numbers" value="4">
-              <label for="btn4" class="label">4</label>
+              <input type="radio" id="btn4" name="numbers" class="numbers" value="4" aria-labelledby="btn4-label" tabindex="0">
+              <label for="btn4" class="label" id="btn4-label">4</label>
             </div>
             
             <div class="numbers-container">
-              <input type="radio" id="btn5" name="numbers" class="numbers" value="5">
-              <label for="btn5" class="label">5</label>
+              <input type="radio" id="btn5" name="numbers" class="numbers" value="5" aria-labelledby="btn5-label" tabindex="0">
+              <label for="btn5" class="label" id="btn5-label">5</label>
             </div>
           </fieldset>
           
@@ -57,12 +56,11 @@
         </form>
       </article>
       <article class="thanks-card">
-        <h2 class="sr-only">Thank you card</h2>
         <img src="/images/illustration-thank-you.svg" alt="">
         <p class="show-selected-rating">
           You selected 4 out of 5
         </p>
-        <p class="thanks-title">Thank you!</p>
+        <h2 class="thanks-title">Thank you!</h2>
         <p class="thanks-text">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
       </article>
     </div>
